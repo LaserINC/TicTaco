@@ -3,7 +3,19 @@ import java.util.*;
 
 public class Player {
 
-	public static void main(String[] args) {
-		
+	private char player;
+
+	public Player(char player) {
+			this.player = player;
+	}
+
+	public char currentPlayer() {
+			return this.player;
+	}
+
+	public void changeToPlayer(char changeTo) {
+		if(changeTo == 'x' || changeTo == 'o') {
+				this.player = changeTo;
+		}
 	}
 }
