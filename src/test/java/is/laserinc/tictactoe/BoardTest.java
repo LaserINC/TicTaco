@@ -15,7 +15,7 @@ public class BoardTest {
     }
 
     @Test
-    public void checkInitializeBoard(){
+    public void checkInitializeBoard2(){
       Board board = new Board();
       board.mark('x', 1);
       board.mark('x', 2);
