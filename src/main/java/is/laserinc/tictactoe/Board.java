@@ -62,7 +62,6 @@ public class Board {
 							return true;
 						}
 						else {
-							System.out.println("Number has already been used");
 							return false;
 						}
 					}
