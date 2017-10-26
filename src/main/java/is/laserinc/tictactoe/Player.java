@@ -12,4 +12,10 @@ public class Player {
 	public char currentPlayer() {
 			return this.player;
 	}
+
+	public void changeToPlayer(char changeTo) {
+		if(changeTo == 'x' || changeTo == 'o') {
+				this.player = changeTo;
+		}
+}
 }
