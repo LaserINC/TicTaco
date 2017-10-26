@@ -15,13 +15,13 @@ public class TicTacToe {
 		System.out.println(player.currentPlayer() + " Pick a number");
 
 		Scanner scanner = new Scanner(System.in);
-		char number = scanner.next().charAt(0);
+		char[] number = scanner.next().toCharArray();
 		int numericValue = 0;
 
 		//numericValue = Character.getNumericValue(number);
-			if(Character.isDigit(number)) {
-		    	numericValue = Character.getNumericValue(number);
-					if(numericValue > 0 || numericValue < 10){
+			if(number.length < 2 && Character.isDigit(number[0])) {
+		    	numericValue = Character.getNumericValue(number[0]);
+					if(numericValue > 0 && numericValue < 10){
 						  return numericValue;
 					}
 					else{
@@ -34,8 +34,8 @@ public class TicTacToe {
 			return getInputNumberFromUser(player);
 	}
 
-	// Play game of tic tac toe. The main game function. 
-	// iterates through loop as many times as the size of the board(9 times). 
+	// Play game of tic tac toe. The main game function.
+	// iterates through loop as many times as the size of the board(9 times).
 	// In each iteration, prints board, asks for next move, and validates that move.
 	public void playGame() {
 		int number = 0;
@@ -43,7 +43,7 @@ public class TicTacToe {
 		Player player = new Player(playerX);
 
 		do {
-			// Get input from user. 
+			// Get input from user.
 			number = getInputNumberFromUser(player);
 
 			// Play "inside game". Mark pos in bord, switch player
@@ -53,10 +53,10 @@ public class TicTacToe {
 			// If board is not full then next player can move.
 			if(gameBoard.canMove()) {
 				number = getInputNumberFromUser(player);
-				playGame(number, player, player.currentPlayer());			
+				playGame(number, player, player.currentPlayer());
 			}
 
-		}while(gameBoard.canMove() && gameBoard.checkWin() != 
+		}while(gameBoard.canMove() && gameBoard.checkWin() !=
 			   playerX && gameBoard.checkWin() != playerO);
 
 		// If no one can make a move. All numbers have been picked
@@ -84,8 +84,8 @@ public class TicTacToe {
 			// Change from current player to other player.
 			player.changeToPlayer(currPlayer);
 		}
-		else { 
-			System.out.println("Number has already been used"); 
+		else {
+			System.out.println("Number has already been used");
 		}
 
 	}
