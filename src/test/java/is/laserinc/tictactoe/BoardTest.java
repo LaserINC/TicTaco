@@ -155,6 +155,15 @@ public class BoardTest {
         t.mark('x', 9);
         assertEquals(t.checkWin(), 'x');
     }
+
+    @Test
+    public void checkIfNoWinner(){
+        Board t = new Board();
+        t.mark('x', 1);
+        t.mark('o', 4);
+        t.mark('o', 7); 
+        assertEquals('u', t.checkWin());   
+    }
 }
 
 	
