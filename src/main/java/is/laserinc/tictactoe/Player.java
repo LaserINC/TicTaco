@@ -13,9 +13,12 @@ public class Player {
 			return this.player;
 	}
 
-	public void changeToPlayer(char changeTo) {
-		if(changeTo == 'x' || changeTo == 'o') {
-				this.player = changeTo;
+	public void changeToPlayer(char changeFrom) {
+		if(changeFrom == 'x') {
+			this.player = 'o';
+		}
+		else if(changeFrom == 'o'){
+			this.player = 'x';
 		}
 	}
 }

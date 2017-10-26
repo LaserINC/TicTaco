@@ -9,11 +9,11 @@ public class PlayerTest {
     Player player = new Player('x');
     assertEquals('x', player.currentPlayer());
   }
-  
+
   @Test
   public void checkChangePlayer(){
     Player player = new Player('x');
-    player.changeToPlayer('o');
+    player.changeToPlayer(player.currentPlayer());
     assertEquals('o', player.currentPlayer());
   }
 }
