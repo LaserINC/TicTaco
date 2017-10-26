@@ -13,6 +13,17 @@ public class BoardTest {
       char board2[][] = {{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
       assertArrayEquals(board.getBoard(), board2);
     }
+
+    @Test
+    public void checkInitializeBoard(){
+      Board board = new Board();
+      board.mark('x', 1);
+      board.mark('x', 2);
+      board.mark('x', 3);
+      board.initializeBoard();
+      char board2[][] = {{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
+      assertArrayEquals(board.getBoard(), board2);
+    }
     // TESTS FOR FUNCTION: canMove()
      @Test
     public void checkCanMove(){
