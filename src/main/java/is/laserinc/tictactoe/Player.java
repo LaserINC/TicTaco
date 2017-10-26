@@ -17,5 +17,5 @@ public class Player {
 		if(changeTo == 'x' || changeTo == 'o') {
 				this.player = changeTo;
 		}
-}
+	}
 }
