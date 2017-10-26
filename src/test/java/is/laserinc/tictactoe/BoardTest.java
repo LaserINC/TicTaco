@@ -24,6 +24,7 @@ public class BoardTest {
       char board2[][] = {{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
       assertArrayEquals(board.getBoard(), board2);
     }
+
     // TESTS FOR FUNCTION: canMove()
      @Test
     public void checkCanMove(){
@@ -31,6 +32,7 @@ public class BoardTest {
         t.initializeBoard();
         assertTrue("PLayer can move",  t.canMove());
     }
+    
     // TESTS FOR FUNCTION: mark(char player, int x)
     @Test
     public void checkMark1() {
@@ -137,7 +139,6 @@ public class BoardTest {
 		assertFalse("board should return 'false'", t.checkWin('o'));
     }
 
-    
     @Test
     public void checkWinnerPlayerO() {
         Board t = new Board();
