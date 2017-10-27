@@ -20,15 +20,21 @@ public class WebGame {
 		player = new Player('x');
 	}
 
+	static int readPortOrDefault() {
+      ProcessBuilder psb = new ProcessBuilder();
+      if (psb.environment().get("PORT") != null) {
+        return Integer.parseInt(psb.environment().get("PORT"));
+      }
+      return 4567;
+    }
+
 	public static void main(String[] args) {
+		staticFileLocation("/Public");
+		port(readPortOrDefault());
+
 		WebGame g = new WebGame();
-		//tic.playGame();
-		String html = "<div style='float:right; width:200px; font-weight:bold;' id='message_prompt'>X has move</div><button onclick='makeMove(1)' id='1'>1</button>  <button onclick='makeMove(2)' id='2'>2</button>  <button onclick='makeMove(3)' id='3'>3</button> <br/><button onclick='makeMove(4)' id='4'>4</button>  <button onclick='makeMove(5)' id='5'>5</button>  <button onclick='makeMove(6)' id='6'>6</button> <br/><button onclick='makeMove(7)' id='7'>7</button>  <button onclick='makeMove(8)' id='8'>8</button>  <button onclick='makeMove(9)' id='9'>9</button> <br/> <button onclick='newGame();' id='new_game'>New game</button> <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script><script>function makeMove(field) {  var current_player = ''; $.get('/makeMove/'+field, { 'field': field }, function(data) {  if(data.length == 1) { $('#'+field).html(data); current_player = data;  isTie(); } else { if(data.indexOf('x') != -1) { $('#'+field).html('x'); current_player = 'x'; } else if(data.indexOf('o') != -1) { $('#'+field).html('o'); current_player = 'o' } alert(data); } var next_player; if(current_player == 'x') { next_player = 'o'; } else { next_player = 'x'; } $('#message_prompt').html(next_player.toUpperCase()+' has move'); });  } function newGame() { $.get('/newGame/', function(data) { $('#message_prompt').html('X has move'); var counter = 1; $('button').each(function() { if($(this).attr('id') != 'new_game') { $(this).html(counter); counter++; } });  }); }  function isTie() { var tie = true; $('button').each(function() { if($(this).html() != 'x' && $(this).html() != 'o' && $(this).attr('id') != 'new_game') { tie = false; } }); if(tie) { alert('Tie game'); } }</script>";
-		get("/", (req, res) -> html);
-		//Go To localhost:4567 on a web browser
-		//
-		post(
-	        "/makeMove",
+
+		post("/makeMove",
 	        (req, res) -> {
 	          String number = req.queryParams("number");
 	          String result = g.playGame(number);
@@ -36,8 +42,7 @@ public class WebGame {
 	        }
 	      );
 
-		get(
-	        "/makeMove/:numbers",
+		get("/makeMove/:numbers",
 	        (req, res) -> {
 	          String number = req.params(":numbers");
 	          String result = g.playGame(number);
@@ -45,19 +50,13 @@ public class WebGame {
 	        }
 	      );
 
-		get(
-	        "/newGame/",
+		get("/newGame/",
 	        (req, res) -> {
 	        	g.newBoard();
 	          return "";
 	        }
 	      );
-	    
-		/*
-		this should find the src/main/resources/public/index.html file
-		staticFileLocation("/Public");
-		port(4567);
-		*/
+
 	}
 
 	public String playGame(String number_string) {
@@ -66,7 +65,6 @@ public class WebGame {
 
 			if(gameBoard.checkWin() == player.currentPlayer()){
 				return "Winner is " + player.currentPlayer() + "!";
-				//askIfNewGame();
 			}
 
 			// Change from current player to other player.
