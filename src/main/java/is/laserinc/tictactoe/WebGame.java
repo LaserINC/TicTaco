@@ -15,8 +15,9 @@ public class WebGame {
 		player = new Player('x');
 	}
 
-	public void new_board() {
+	public void newBoard() {
 		gameBoard = new Board();
+		player = new Player('x');
 	}
 
 	public static void main(String[] args) {
@@ -47,7 +48,7 @@ public class WebGame {
 		get(
 	        "/newGame/",
 	        (req, res) -> {
-	        	g.new_board();
+	        	g.newBoard();
 	          return "";
 	        }
 	      );
