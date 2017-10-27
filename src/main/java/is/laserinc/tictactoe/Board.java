@@ -16,7 +16,7 @@ public class Board {
 		for(int i = 0; i < boardSize; i++) {
 			for(int j = 0; j < boardSize; j++) {
 				char number = Integer.toString(counter).charAt(0);
-				board[i][j] = number;
+				board[i][j] = "  " ;
 				counter++;
 			}
 		}
