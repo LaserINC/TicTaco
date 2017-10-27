@@ -17,21 +17,20 @@ public class TicTacToe {
 		Scanner scanner = new Scanner(System.in);
 		char[] number = scanner.next().toCharArray();
 		int numericValue = 0;
+		
+		if(number.length < 2 && Character.isDigit(number[0])) {
+	    	numericValue = Character.getNumericValue(number[0]);
+				if(numericValue > 0 && numericValue < 10){
+					  return numericValue;
+				}
+				else{
+					System.out.println("Pick a number between 1 & 9");
+					getInputNumberFromUser(player);
+				}
+		}
 
-		//numericValue = Character.getNumericValue(number);
-			if(number.length < 2 && Character.isDigit(number[0])) {
-		    	numericValue = Character.getNumericValue(number[0]);
-					if(numericValue > 0 && numericValue < 10){
-						  return numericValue;
-					}
-					else{
-						System.out.println("Pick a number between 1 & 9");
-						getInputNumberFromUser(player);
-					}
-			}
-
-			System.out.println("Pick a number between 1 & 9");
-			return getInputNumberFromUser(player);
+		System.out.println("Pick a number between 1 & 9");
+		return getInputNumberFromUser(player);
 	}
 
 	// Play game of tic tac toe. The main game function.
@@ -63,7 +62,7 @@ public class TicTacToe {
 		// and the game ended in a tie.
 		if(!gameBoard.canMove()){
 			System.out.println("It's a tie!");
-			//askIfNewGame();
+			askIfNewGame();
 			System.exit(0);
 		}
 	}
@@ -77,7 +76,7 @@ public class TicTacToe {
 
 			if(gameBoard.checkWin() == player.currentPlayer()){
 				System.out.println("Winner is " + currPlayer + "!");
-				//askIfNewGame();
+				askIfNewGame();
 				System.exit(0);
 			}
 
@@ -90,10 +89,29 @@ public class TicTacToe {
 
 	}
 
+	private void askIfNewGame() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("New game?[Y/N]");
+		char answer = scanner.next().charAt(0);
+		validateNewGameInput(answer);
+	}
+
+	private void validateNewGameInput(char input) {
+		if(input == 'y' || input == 'Y') {
+			gameBoard.initializeBoard();
+			playGame();
+		}
+
+		else if(input == 'n' || input == 'N') {return;}
+
+		else {
+			System.out.println("Invalid input!");
+			askIfNewGame();
+		}
+	}
 
 	public static void main(String[] args) {
 		TicTacToe tic = new TicTacToe();
 		tic.playGame();
-
 	}
 }

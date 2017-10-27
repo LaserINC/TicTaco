@@ -24,7 +24,7 @@ public class Board {
 
 
 	public void printBoard() {
- 		System.out.println("\n" + " " + board[0][0] + " | " + board[0][1] + " | " + board[0][2] + "\n" + 
+ 		System.out.println("\n" + " " + board[0][0] + " | " + board[0][1] + " | " + board[0][2] + "\n" +
  						   "-----------" + "\n" +
  						   " " + board[1][0] + " | " + board[1][1] + " | " + board[1][2] + "\n" +
  						   "-----------" + "\n" +
