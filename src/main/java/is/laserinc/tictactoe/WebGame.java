@@ -29,7 +29,7 @@ public class WebGame {
     }
 
 	public static void main(String[] args) {
-		staticFileLocation("/Public");
+		staticFileLocation("/public");
 		port(readPortOrDefault());
 
 		WebGame g = new WebGame();

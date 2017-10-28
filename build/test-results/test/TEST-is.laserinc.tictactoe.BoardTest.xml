@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.laserinc.tictactoe.BoardTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2017-10-28T13:45:01" hostname="desktop-b1mmcql.hir.is" time="0.008">
+<testsuite name="is.laserinc.tictactoe.BoardTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2017-10-28T15:06:38" hostname="desktop-b1mmcql.hir.is" time="0.009">
   <properties/>
   <testcase name="checkWinnerColumn" classname="is.laserinc.tictactoe.BoardTest" time="0.002"/>
   <testcase name="checkIfNoWinner" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
   <testcase name="checkWinnerColumnPlayer2" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
   <testcase name="checkInitializeBoard2" classname="is.laserinc.tictactoe.BoardTest" time="0.001"/>
-  <testcase name="checkInitializeBoard" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
+  <testcase name="checkInitializeBoard" classname="is.laserinc.tictactoe.BoardTest" time="0.001"/>
   <testcase name="checkMark1" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
   <testcase name="checkMark2" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
   <testcase name="checkMark3" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
   <testcase name="checkMark4" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
-  <testcase name="checkMark5" classname="is.laserinc.tictactoe.BoardTest" time="0.001"/>
+  <testcase name="checkMark5" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
   <testcase name="checkMark6" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
   <testcase name="checkWinnerCross" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
-  <testcase name="checkWinnerFalse" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
+  <testcase name="checkWinnerFalse" classname="is.laserinc.tictactoe.BoardTest" time="0.001"/>
   <testcase name="checkCanMove" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
-  <testcase name="checkWinnerPlayerO" classname="is.laserinc.tictactoe.BoardTest" time="0.001"/>
-  <testcase name="checkWinnerPlayerX" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
+  <testcase name="checkWinnerPlayerO" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
+  <testcase name="checkWinnerPlayerX" classname="is.laserinc.tictactoe.BoardTest" time="0.001"/>
   <testcase name="checkWinnerColumnPlayer2_2" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
   <testcase name="checkWinnerRow" classname="is.laserinc.tictactoe.BoardTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
