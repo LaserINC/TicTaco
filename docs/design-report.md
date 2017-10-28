@@ -2,7 +2,7 @@ Design report
 =============
 Tic Tac Toe is a game coded in the JAVA language using Test Driven Development and Travis for Automated Continuous Integration Server.
 
-Tic Tac Toe has four classes: TicTacToe, Board, Player and webGame.
+Tic Tac Toe has four classes: Game, Board, Player and webGame
 
 Below are the classes with it´s functions and main variables .
 
@@ -46,3 +46,4 @@ Below are the classes with it´s functions and main variables .
     public void newBoard();
     static int readPortOrDefault();
     public string playGame();
+
