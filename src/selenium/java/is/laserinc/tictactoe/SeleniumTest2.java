@@ -12,6 +12,133 @@ public class SeleniumTest2 extends SeleniumTest {
     driver.get(baseUrl);
     assertEquals("TIC TAC TOE", driver.getTitle());
   }
+
+  @Test
+  public void testGameXWin() {
+    driver.get(baseUrl);
+
+    WebElement button = driver.findElement(By.id("1"));
+    button.click();
+
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("4"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("2"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("5"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("3"));
+    button.click();
+    
+    Thread.sleep(2000);
+    
+    WebElement results = driver.findElement(By.id("message_prompt"));
+    assertEquals("Winner is x!", results.getText());
+    //assertEquals("TicTacToe", driver.getTitle());
+  }
+
+  @Test
+  public void testGameOWin() {
+    driver.get(baseUrl);
+
+    button = driver.findElement(By.id("5"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    WebElement button = driver.findElement(By.id("1"));
+    button.click();
+
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("4"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("2"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("9"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("3"));
+    button.click();
+    
+    Thread.sleep(2000);
+    
+    WebElement results = driver.findElement(By.id("message_prompt"));
+    assertEquals("Winner is o!", results.getText());
+    //assertEquals("TicTacToe", driver.getTitle());
+  }
+
+
+  @Test
+  public void testGameTie() {
+    driver.get(baseUrl);
+
+    button = driver.findElement(By.id("1"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    WebElement button = driver.findElement(By.id("2"));
+    button.click();
+
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("3"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("5"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("4"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("6"));
+    button.click();
+    
+    Thread.sleep(2000);
+    
+    button = driver.findElement(By.id("8"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("7"));
+    button.click();
+    
+    Thread.sleep(2000);
+
+    button = driver.findElement(By.id("9"));
+    button.click();
+    
+    Thread.sleep(2000);
+    WebElement results = driver.findElement(By.id("message_prompt"));
+    assertEquals("Winner is o!", results.getText());
+    //assertEquals("TicTacToe", driver.getTitle());
+  }
 }
   /*
   @Test
