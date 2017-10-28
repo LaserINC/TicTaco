@@ -25,7 +25,11 @@ dependencies {
     compile 'com.sparkjava:spark-core:2.6.0'
 }
 
-task stage(dependsOn: ['build', 'clean'])
+task stage {
+    dependsOn build
+}
+
+
 build.mustRunAfter clean
 
 

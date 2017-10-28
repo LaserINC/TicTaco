@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.laserinc.tictactoe.PlayerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-10-28T12:25:35" hostname="Ghostmedia" time="0.001">
+<testsuite name="is.laserinc.tictactoe.PlayerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-10-28T13:45:01" hostname="desktop-b1mmcql.hir.is" time="0.001">
   <properties/>
   <testcase name="checkInsertPlayer" classname="is.laserinc.tictactoe.PlayerTest" time="0.001"/>
   <testcase name="checkChangePlayer" classname="is.laserinc.tictactoe.PlayerTest" time="0.0"/>
