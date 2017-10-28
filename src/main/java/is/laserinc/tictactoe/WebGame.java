@@ -31,7 +31,6 @@ public class WebGame {
 	public static void main(String[] args) {
 		staticFileLocation("/public");
 		port(readPortOrDefault());
-		//get("/", (req, res) -> "<button> takki </button>" );
 		WebGame g = new WebGame();
 
 		post("/makeMove",
