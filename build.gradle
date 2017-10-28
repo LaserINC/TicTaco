@@ -32,12 +32,10 @@ dependencies {
 }
 
 
-task stage {
-    dependsOn build
-}
-
-
+task stage(dependsOn: ['clean', 'build', 'installDist'])
 build.mustRunAfter clean
+installDist.mustRunAfter build
+
 
 
 jar {
