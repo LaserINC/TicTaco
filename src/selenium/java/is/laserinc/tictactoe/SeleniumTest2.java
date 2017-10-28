@@ -10,7 +10,7 @@ public class SeleniumTest2 extends SeleniumTest {
   @Test
   public void testTitleMatches() {
     driver.get(baseUrl);
-    //assertEquals("TicTacToe", driver.getTitle());
+    assertEquals("TIC TAC TOE", driver.getTitle());
   }
 }
   /*
