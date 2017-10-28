@@ -1,1 +1,13 @@
 language: java
+
+before_install:
+ - chmod +x gradlew
+
+jdk:
+    - oraclejdk8
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "abf70ac4-b185-4f0f-9160-45eddb9e0022"
+  app: calm-tundra-21947
