@@ -1,1 +1,1 @@
-web: build/install/laserinc/bin/laserinc
+java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
