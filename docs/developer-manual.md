@@ -1,6 +1,5 @@
 ### Status
-[![Build Status](https:)
-
+[![Build Status](https://travis-ci.org/LaserINC/TicTaco.svg?branch=development_master)](https://travis-ci.org/LaserINC/TicTaco)
 TicTacToe
 =========
 #### Developement Manual
@@ -24,20 +23,13 @@ Setting up the environment
 
 3. Install and set up Gradle: for instructions go to  https://gradle.org/install/#helpful-information
 
-	3.1. 
+	3.1. Install the lastest complete version of gradle from: https://gradle.org/releases/
 
-	3.2. 
-
-	3.3. 
-
-	3.4. 
-
-4. Install and set up Travis:
+4. Make an account for Travis: https://travis-ci.org/
 
 		
-5. Install and set up Heroku: for instructions for go to https://devcenter.heroku.com/articles/getting-started-with-java#introduction
-
-	
+5. Make an account for Heroku: for instructions for go to https://signup.heroku.com/dc
+	5.1. get familier with Heroku https://devcenter.heroku.com/articles/getting-started-with-gradle-on-heroku#introduction
 
 
 Running the project
