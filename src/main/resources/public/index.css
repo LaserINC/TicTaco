@@ -19,10 +19,18 @@ body {
 #message_prompt {
   margin: 0 auto;
   width: 200px;
+<<<<<<< HEAD
   max-height: 100px;
   padding: 20px;
   text-align: center;
   font-size: 40px;
+=======
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 5px;
+
+>>>>>>> development_master
 }
 
 button{
