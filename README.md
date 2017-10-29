@@ -7,7 +7,7 @@ TicTacToe started out as a simple console application for two players but develo
 
 #### Game play: 
 
-https://glacial-plateau-23954.herokuapp.com/
+https://laserinc-tictaco.herokuapp.com/
 
 
 #### Source code: 
