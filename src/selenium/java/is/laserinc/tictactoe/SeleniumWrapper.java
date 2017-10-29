@@ -19,12 +19,12 @@ public abstract class SeleniumWrapper {
     driver = new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-    port = System.getenv("PORT");
-    if (port == null) {
-        port = "4567";
-    }
+    // port = System.getenv("PORT");
+    // if (port == null) {
+    //     port = "4567";
+    // }
 
-    baseUrl = "http://localhost:" + port;
+    baseUrl = "https://glacial-plateau-23954.herokuapp.com/";
   }
 
   @Before
