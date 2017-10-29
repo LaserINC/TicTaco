@@ -61,7 +61,7 @@ public class TicTacToe {
 		// If no one can make a move. All numbers have been picked
 		// and the game ended in a tie.
 		if(!gameBoard.canMove()){
-			System.out.println("It's a tie!");
+			System.out.println("Wow, we have a tie!");
 			askIfNewGame();
 			System.exit(0);
 		}
@@ -75,7 +75,7 @@ public class TicTacToe {
 			gameBoard.checkWin();
 
 			if(gameBoard.checkWin() == player.currentPlayer()){
-				System.out.println("Winner is " + currPlayer + "!");
+				System.out.println("Congradulations player " + currPlayer + "! You are the winner!");
 				askIfNewGame();
 				System.exit(0);
 			}
@@ -84,7 +84,7 @@ public class TicTacToe {
 			player.changeToPlayer(currPlayer);
 		}
 		else {
-			System.out.println("Number has already been used");
+			System.out.println("This square has already been ticked! Choose another one!");
 		}
 
 	}
