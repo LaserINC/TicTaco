@@ -6,7 +6,7 @@ Tic Tac Toe has four classes: Game, Board, Player and webGame
 
 Below are the classes with it´s functions and main variables .
 
-####TicTacToe
+#### TicTacToe
 
     private Board gameBoard;
     private char playerX = 'x';
@@ -19,7 +19,7 @@ Below are the classes with it´s functions and main variables .
     private void validateNewGameInput();
 
 
-####Board
+#### Board
 
     private char board[][];
     private int boardSize = 3;
@@ -32,7 +32,7 @@ Below are the classes with it´s functions and main variables .
     public char checkWin();
     public boolean checkWin();
   
-####Player
+#### Player
 
     private char player;
     public player();
@@ -40,10 +40,25 @@ Below are the classes with it´s functions and main variables .
     public void changeToPlayer();
 
    
-####webGame 
+#### webGame 
 
     public WebGame();
     public void newBoard();
     static int readPortOrDefault();
     public string playGame();
 
+#### Class diagram
+
+Below is a draft of a class diagram, created in the beginning of the project.
+
+![picture](other/class_diagram.png)
+
+#### Development process(Git line)
+
+Below is picture of the development process when creating the program. When creating new features, feature branches were made.
+When specific features were completed, a pull request was made, for other team members to test and accept.
+There were two main branches, the master branch which only containd complete versions of the program and
+the development branch where the actual development took place, when starting the web development of the program, a sub branc feature_webApp
+was created which included branches where the actual web development took place.
+
+![picture](other/git_line_branching.png)

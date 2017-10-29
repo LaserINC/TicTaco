@@ -63,7 +63,7 @@ public class WebGame {
 		if(gameBoard.mark(player.currentPlayer(), number)) {
 
 			if(gameBoard.checkWin() == player.currentPlayer()){
-				return "Winner is " + player.currentPlayer() + "!";
+				return "Congratulations player " + player.currentPlayer() + " you are the winner!";
 			}
 
 			// Change from current player to other player.
@@ -72,7 +72,7 @@ public class WebGame {
 			return ""+pl;
 		}
 		else {
-			return "Number has already been used";
+			return "This square has already been ticked! Choose another one!";
 		}
 
 	}
