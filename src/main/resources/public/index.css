@@ -14,7 +14,7 @@ body {
 
 #message_prompt {
   margin: 0 auto;
-  width: 200px;
+  width: 500px;
   max-height: 100px;
   padding: 20px;
   text-align: center;
@@ -30,3 +30,8 @@ button{
 	  width: 50px;
 	  border-radius: 10px;                                                                                      
  }
+
+#new_game{
+ width: 178px; 
+ margin-right: 5px;
+}
