@@ -1,7 +1,5 @@
 body {
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;  padding: 100px;
-  
-
 }
 
 #milla {
@@ -12,8 +10,6 @@ body {
   text-align: center;
   margin-bottom: 10px;
   border-radius: 15px;
-
-
 }
 
 #message_prompt {
