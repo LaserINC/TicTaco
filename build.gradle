@@ -41,3 +41,4 @@ task selenium(type: Test, dependsOn: installDist) {
   }
 
 }
+task stage (dependsOn: installDist)
