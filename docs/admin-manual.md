@@ -1,7 +1,7 @@
 TicTacToe
 =========
 
-####Admin Manual
+#### Admin Manual
 
 The programs needed to develop and run this program are:
 
@@ -11,10 +11,12 @@ The programs needed to develop and run this program are:
 	Gradle
 	Travis
 	Heroku
+	Chrome driver
 
 1. Installation of programs needed.
 
 The following lists instructions to install vital programs.
+
 1.1. Install and setup Git: https://help.github.com/articles/set-up-git/
 
 1.1.2 Install and setup Java: https://www.java.com/en/download/help/windows_manual_download.xml
@@ -24,6 +26,8 @@ The following lists instructions to install vital programs.
 1.1.4 Install and setup Travis: https://travis-ci.org/
 
 1.1.5 Install and setup Heroku: https://signup.heroku.com/dc
+
+1.1.5 Install and setup Chrome driver: https://sites.google.com/a/chromium.org/chromedriver/getting-started
 
 Clone the project to your computer by running this command: git clone git@github.com:[yourUsername]/[projectName].git
 
