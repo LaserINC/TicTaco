@@ -1,18 +1,40 @@
-[![Build Status](https://travis-ci.org/LaserINC/TicTaco.svg?branch=development_master)](https://travis-ci.org/LaserINC/TicTaco)
+﻿[![Build Status](https://travis-ci.org/LaserINC/TicTaco.svg?branch=development_master)](https://travis-ci.org/LaserINC/TicTaco)
+
+TicTacToe started out as a simple console application for two players but
+developed into a web App which was eventually launched via Heroku.com.
 
 
-TicTacToe is a simple console application for two players.
-Future plans are to implement a web based application and possibly import 
-an AI feature for interactive game play.
+# Game play: 
 
-Taco is here!
+https://glacial-plateau-23954.herokuapp.com/
 
-Developed by LaserInc.
-developers
-Begga
-Hafdis
-Raggi
-Reynir
-Siggi
-Valli
-Þórir
+
+# Source code: https://github.com/LaserINC/TicTaco
+
+
+# Developer platform: 
+
+Windows
+
+
+# Software used:
+
+-java version "1.8.0_144" -Gradle 
+
+-Spark 
+
+-Junit
+
+ -Travis -Selenium
+
+ 
+
+# Developed by LaserInc.
+# Developers:
+Bergþóra Gná H. Gordon
+Hafdís Sæland
+Ragnar Stefánsson
+Reynir Þór Reynirsson
+Sigurður Jökull Eydal Tómsson
+Valgeir Már Sturluson
+Þórir Ármann Valdimarsson
