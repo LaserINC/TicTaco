@@ -9,8 +9,6 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-
-
 public abstract class SeleniumWrapper {
   static ChromeDriver driver;
   static String baseUrl;
@@ -21,12 +19,12 @@ public abstract class SeleniumWrapper {
     driver = new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-    port = System.getenv("PORT");
-    if (port == null) {
-        port = "4567";
-    }
-    baseUrl = "http://localhost:" + port;
-    //baseUrl = "https://tictactoe-assignment.herokuapp.com/"; // + port;
+    // port = System.getenv("PORT");
+    // if (port == null) {
+    //     port = "4567";
+    // }
+
+    baseUrl = "https://laserinc-tictaco.herokuapp.com/";
   }
 
   @Before

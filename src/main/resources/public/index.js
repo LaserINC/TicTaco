@@ -1,4 +1,3 @@
-
 function makeMove(field) { 
     $.get('/makeMove/'+field, { 'field': field }, 
         function(data) { 
@@ -18,7 +17,6 @@ function makeMove(field) {
 		}); 
 } 
 
-
 function newGame() { 
 	$.get('/newGame/', function(data) { 
 		var counter = 0; 
@@ -31,8 +29,6 @@ function newGame() {
 			}); 
 	}); 
 } 
-
-
 
 function isTie() { 
 	var tie = true; 

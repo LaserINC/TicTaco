@@ -4,7 +4,6 @@ import java.util.*;
 import static spark.Spark.*;
 
 public class WebGame {
-
 	private Board gameBoard;
 	private char playerX = 'x';
 	private char playerO = 'o';
@@ -21,12 +20,14 @@ public class WebGame {
 	}
 
 	static int readPortOrDefault() {
-      ProcessBuilder psb = new ProcessBuilder();
-      if (psb.environment().get("PORT") != null) {
-        return Integer.parseInt(psb.environment().get("PORT"));
-      }
-      return 4567;
-    }
+		ProcessBuilder psb = new ProcessBuilder();
+
+		if(psb.environment().get("PORT") != null) {
+			return Integer.parseInt(psb.environment().get("PORT"));
+		}
+
+		return 4567;
+	}
 
 	public static void main(String[] args) {
 		staticFileLocation("/public");
@@ -35,26 +36,29 @@ public class WebGame {
 
 		post("/makeMove",
 	        (req, res) -> {
-	          String number = req.queryParams("number");
-	          String result = g.playGame(number);
-	          return result;
+	        	String number = req.queryParams("number");
+	        	String result = g.playGame(number);
+	        	
+	        	return result;
 	        }
-	      );
+	    );
 
 		get("/makeMove/:numbers",
 	        (req, res) -> {
-	          String number = req.params(":numbers");
-	          String result = g.playGame(number);
-	          return result;
+	        	String number = req.params(":numbers");
+	        	String result = g.playGame(number);
+	        	
+	        	return result;
 	        }
-	      );
+	    );
 
 		get("/newGame/",
 	        (req, res) -> {
 	        	g.newBoard();
-	          return "";
+	          
+	          	return "";
 	        }
-	      );
+	    );
 
 	}
 
@@ -74,6 +78,6 @@ public class WebGame {
 		else {
 			return "This square has already been ticked! Choose another one!";
 		}
-
 	}
+	
 }
