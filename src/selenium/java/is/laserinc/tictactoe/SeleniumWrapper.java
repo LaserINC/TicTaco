@@ -24,7 +24,7 @@ public abstract class SeleniumWrapper {
     //     port = "4567";
     // }
 
-    baseUrl = "https://glacial-plateau-23954.herokuapp.com/";
+    baseUrl = "https://laserinc-tictaco.herokuapp.com/";
   }
 
   @Before
