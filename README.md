@@ -4,7 +4,7 @@ TicTacToe started out as a simple console application for two players but
 developed into a web App which was eventually launched via Heroku.com.
 
 
-# Game play: 
+#### Game play: 
 
 https://glacial-plateau-23954.herokuapp.com/
 
