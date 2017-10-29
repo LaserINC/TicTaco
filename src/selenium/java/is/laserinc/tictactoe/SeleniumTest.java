@@ -59,7 +59,7 @@ public class SeleniumTest extends SeleniumWrapper {
 
   @Test
   public void testNumberHasAlreadyBeenUsed() throws Exception {
-    gameString = "1421";
+    gameString = "14234";
 
     for(int i = 0; i < gameString.length(); i++) {
       driver.findElement(By.id(Character.toString(gameString.charAt(i)))).click();
