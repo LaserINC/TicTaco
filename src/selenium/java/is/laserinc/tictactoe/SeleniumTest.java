@@ -11,12 +11,12 @@ public class SeleniumTest extends SeleniumWrapper {
   @Test
   public void testTitleMatches() {
     driver.get(baseUrl);
+    
     assertEquals("TIC TAC TOE", driver.getTitle());
   }
 
   @Test
   public void testGameXWin() throws Exception {
-
     gameString = "14253";
 
     for(int i = 0; i < gameString.length(); i++) {
@@ -25,13 +25,12 @@ public class SeleniumTest extends SeleniumWrapper {
     }
     
     String results = driver.findElement(By.id("message_prompt")).getText();
-    assertEquals("Winner is x!", results);
-
+    
+    assertEquals("Congratulations player x you are the winner!", results);
   }
 
   @Test
   public void testGameOWin() throws Exception {
-    
     gameString = "514293";
 
     for(int i = 0; i < gameString.length(); i++) {
@@ -40,14 +39,12 @@ public class SeleniumTest extends SeleniumWrapper {
     }
 
     String results = driver.findElement(By.id("message_prompt")).getText();
-    assertEquals("Winner is o!", results);
-
+    
+    assertEquals("Congratulations player o you are the winner!", results);
   }
-
 
   @Test
   public void testGameTie() throws Exception{
-
     gameString = "123546879";
 
     for(int i = 0; i < gameString.length(); i++) {
@@ -56,13 +53,12 @@ public class SeleniumTest extends SeleniumWrapper {
     }
 
     String results = driver.findElement(By.id("message_prompt")).getText();
-    assertEquals("Tie game", results);
-
+    
+    assertEquals("Wow, we have a tie game!", results);
   }
 
   @Test
   public void testNumberHasAlreadyBeenUsed() throws Exception {
-
     gameString = "1421";
 
     for(int i = 0; i < gameString.length(); i++) {
@@ -71,7 +67,8 @@ public class SeleniumTest extends SeleniumWrapper {
     }
 
     String results = driver.findElement(By.id("message_prompt")).getText();
-    assertEquals("Number has already been used", results);
-
+    
+    assertEquals("This square has already been ticked! Choose another one!", results);
   }
+  
 }

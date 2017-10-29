@@ -17,8 +17,9 @@ public class Player {
 		if(changeFrom == 'x') {
 			this.player = 'o';
 		}
-		else if(changeFrom == 'o'){
+		else if(changeFrom == 'o') {
 			this.player = 'x';
 		}
 	}
+	
 }

@@ -18,18 +18,20 @@ public class TicTacToe {
 		char[] number = scanner.next().toCharArray();
 		int numericValue = 0;
 		
+		// Validation for input from user.
 		if(number.length < 2 && Character.isDigit(number[0])) {
 	    	numericValue = Character.getNumericValue(number[0]);
-				if(numericValue > 0 && numericValue < 10){
+				if(numericValue > 0 && numericValue < 10) {
 					  return numericValue;
 				}
-				else{
+				else {
 					System.out.println("Pick a number between 1 & 9");
 					getInputNumberFromUser(player);
 				}
 		}
 
 		System.out.println("Pick a number between 1 & 9");
+		
 		return getInputNumberFromUser(player);
 	}
 
@@ -60,7 +62,7 @@ public class TicTacToe {
 
 		// If no one can make a move. All numbers have been picked
 		// and the game ended in a tie.
-		if(!gameBoard.canMove()){
+		if(!gameBoard.canMove()) {
 			System.out.println("Wow, we have a tie!");
 			askIfNewGame();
 			System.exit(0);
@@ -74,7 +76,7 @@ public class TicTacToe {
 			gameBoard.printBoard();
 			gameBoard.checkWin();
 
-			if(gameBoard.checkWin() == player.currentPlayer()){
+			if(gameBoard.checkWin() == player.currentPlayer()) {
 				System.out.println("Congradulations player " + currPlayer + "! You are the winner!");
 				askIfNewGame();
 				System.exit(0);
@@ -102,7 +104,9 @@ public class TicTacToe {
 			playGame();
 		}
 
-		else if(input == 'n' || input == 'N') {return;}
+		else if(input == 'n' || input == 'N') {
+			return;
+		}
 
 		else {
 			System.out.println("Invalid input!");
@@ -114,4 +118,5 @@ public class TicTacToe {
 		TicTacToe tic = new TicTacToe();
 		tic.playGame();
 	}
+	
 }

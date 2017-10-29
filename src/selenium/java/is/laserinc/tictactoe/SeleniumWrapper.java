@@ -9,8 +9,6 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-
-
 public abstract class SeleniumWrapper {
   static ChromeDriver driver;
   static String baseUrl;
@@ -25,8 +23,8 @@ public abstract class SeleniumWrapper {
     if (port == null) {
         port = "4567";
     }
+
     baseUrl = "http://localhost:" + port;
-    //baseUrl = "https://tictactoe-assignment.herokuapp.com/"; // + port;
   }
 
   @Before
