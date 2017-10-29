@@ -20,19 +20,20 @@ Windows
 # Software used:
 
 -java version 1.8.0_144
--Gradle
--Spark
 
+-Gradle
+
+-Spark
 
 -Junit
 
-
 -Travis
--Selenium
 
+-Selenium
  
 
-# Developed by LaserInc.
+# Developed by: 
+LaserInc.
 # Developers:
 Bergþóra Gná H. Gordon, 
 Hafdís Sæland, 
