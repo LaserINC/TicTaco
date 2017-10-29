@@ -19,22 +19,13 @@ Windows
 
 # Software used:
 
--java version "1.8.0_144" -Gradle 
-
--Spark 
+-java version 1.8.0_144-Gradle-Spark
 
 -Junit
 
- -Travis -Selenium
+-Travis-Selenium
 
  
 
 # Developed by LaserInc.
-# Developers:
-Bergþóra Gná H. Gordon,
-Hafdís Sæland,
-Ragnar Stefánsson,
-Reynir Þór Reynirsson,
-Sigurður Jökull Eydal Tómsson,
-Valgeir Már Sturluson,
-Þórir Ármann Valdimarsson
+# Developers:Bergþóra Gná H. Gordon, Hafdís Sæland, Ragnar Stefánsson, Reynir Þór Reynirsson, Sigurður Jökull Eydal Tómsson, Valgeir Már Sturluson, Þórir Ármann Valdimarsson
