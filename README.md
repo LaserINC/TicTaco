@@ -31,10 +31,10 @@ Windows
 
 # Developed by LaserInc.
 # Developers:
-Bergþóra Gná H. Gordon
-Hafdís Sæland
-Ragnar Stefánsson
-Reynir Þór Reynirsson
-Sigurður Jökull Eydal Tómsson
-Valgeir Már Sturluson
+Bergþóra Gná H. Gordon,
+Hafdís Sæland,
+Ragnar Stefánsson,
+Reynir Þór Reynirsson,
+Sigurður Jökull Eydal Tómsson,
+Valgeir Már Sturluson,
 Þórir Ármann Valdimarsson
